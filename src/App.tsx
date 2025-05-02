@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import Greet from './Component/greet/greet';
+import Application from './Component/Application/Application';
+import { Skills } from './Component/skills/Skills';
+import Counter from './Component/Counter/counter';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <a href='https://reactjs.org'
+      target='_blank'>
+    learn react
+      </a>
+   {/* <b ><Greet name='Lokendra'/></b>  */}
+   {/* <Application /> */}
+   <Skills skills={['HTML', 'CSS', 'Javascript']} />
+   <Counter/>
+
     </div>
   );
 }
 
 export default App;
+
+
+
+
