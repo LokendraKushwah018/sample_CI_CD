@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 16
 
+      - name: Use GITHUB_TOKEN
+        run: |
+          echo "Using GITHUB_TOKEN to authenticate"
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user
+
       - name: Install dependencies
         run: npm install
 
